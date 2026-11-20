@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071521">
+  <title>Besinden Enerjiye | İnteraktif Biyoloji</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">✳</span><span>BESİNDEN<span class="brand-light">ENERJİYE</span></span></a>
+    <nav><a href="#kesfet">Keşfet</a><a href="#temeller">Temeller</a><a href="#yolculuk">Besin yolculuğu</a><a href="#laboratuvar">Emilim</a><a href="#tasima">Taşınma</a><a href="#quiz">Bilgi testi</a></nav>
+    <button class="nav-cta" onclick="document.querySelector('#kesfet').scrollIntoView({behavior:'smooth'})">Keşfet <span>↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="kesfet">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> İNTERAKTİF BİYOLOJİ DENEYİMİ</div>
+        <h1>Bir lokmanın<br><em>enerjiye</em> dönüşen<br>yolculuğu.</h1>
+        <p>Besinlerin sindirim sistemindeki yolculuğunu keşfet. Emilimi incele, hücreye ulaş ve enerjinin nasıl elde edildiğini öğren.</p>
+        <div class="hero-actions">
+          <button class="primary-btn" onclick="document.querySelector('#yolculuk').scrollIntoView({behavior:'smooth'})">Yolculuğu başlat <span>→</span></button>
+          <button class="text-btn" onclick="document.querySelector('#model').scrollIntoView({behavior:'smooth'})"><span class="play">▶</span> 3D modeli keşfet</button>
+        </div>
+        <div class="hero-stats"><div><b>03</b><span>Temel süreç</span></div><i></i><div><b>06</b><span>Yolculuk durağı</span></div><i></i><div><b>01</b><span>Yaşamın enerjisi</span></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="visual-label label-top"><span class="label-dot"></span> SİNDİRİM SİSTEMİ <small>Besinlerin parçalanması</small></div>
+        <div id="hero-art"><div class="loading-model">3D model hazırlanıyor<span>● ● ●</span></div></div>
+        <div class="visual-label label-bottom"><span class="label-dot mint"></span> HÜCRESEL SOLUNUM <small>ATP üretimi</small></div>
+        <div class="float-chip chip-a">＋ Besin</div><div class="float-chip chip-b">ATP ✦</div>
+      </div>
+      <div class="scroll-hint">AŞAĞI KAYDIR <span>↓</span></div>
+    </section>
+
+    <section class="section model-section" id="model">
+      <div class="section-heading"><div><div class="eyebrow">01 / VÜCUDU TANI</div><h2>Sindirim sistemini<br><em>yakından keşfet.</em></h2></div><p>Organları seçerek görevlerini, vücuttaki konumlarını ve sindirim sürecine katkılarını öğren. Diğer organları saydamlaştırarak seçtiğin yapıyı incele.</p></div>
+      <div class="model-panel">
+        <div class="model-canvas-wrap"><div id="anatomy-canvas"></div><div class="model-hint">Döndürmek için sürükle · Yakınlaştırmak için kaydır</div></div>
+        <div class="organ-panel"><div class="panel-kicker">ETKİLEŞİMLİ ANATOMİ</div><h3 id="organ-title">Bir organ seç</h3><p id="organ-desc">3D model üzerindeki organlardan birine tıklayarak görevini keşfet.</p><div class="organ-fact" id="organ-fact"><span>✦</span> Her organ sindirim sürecinin farklı bir aşamasında görev alır.</div><div class="organ-list" id="organ-list"></div>
+          <div class="anatomy-tools"><label class="toggle-line"><input type="checkbox" id="isolate-organ" checked> Seçili organı öne çıkar</label><label class="toggle-line"><input type="checkbox" id="show-labels" checked> Anatomik konum etiketleri</label>
+          </div></div>
+      </div>
+    </section>
+
+
+    <section class="section basics-section" id="temeller">
+      <div class="section-heading"><div><div class="eyebrow">02 / ÖNCE TEMELLER</div><h2>Sindirim, emilim<br><em>ve taşınma nedir?</em></h2></div><p>Bu üç kavram birbirine bağlıdır ama aynı anlama gelmez. Önce aralarındaki farkı öğrenelim.</p></div>
+      <div class="concept-grid">
+        <article class="concept-card"><div class="concept-number">01</div><div class="concept-icon">✂</div><h3>Sindirim</h3><p>Büyük besin moleküllerinin, bağırsak duvarından geçebilecek kadar küçük yapı taşlarına ayrılmasıdır.</p><div class="concept-example"><b>Örnek:</b> Nişasta → daha küçük şekerler → glikoz</div></article>
+        <article class="concept-card"><div class="concept-number">02</div><div class="concept-icon">⇢</div><h3>Emilim</h3><p>Sindirim ürünlerinin ve su, mineral, vitamin gibi maddelerin bağırsak içinden bağırsak duvarını geçerek kan veya lenfe alınmasıdır.</p><div class="concept-example"><b>Örnek:</b> Glikoz → bağırsak kılcal kan damarı</div></article>
+        <article class="concept-card"><div class="concept-number">03</div><div class="concept-icon">⌁</div><h3>Taşınma</h3><p>Emilen maddelerin kan ve lenf dolaşımıyla karaciğere, dokulara ve hücrelere ulaştırılmasıdır.</p><div class="concept-example"><b>Örnek:</b> Glikoz → kan → karaciğer → vücut hücreleri</div></article>
+      </div>
+      <div class="simple-analogy"><b>Bir kargo merkezi gibi düşün:</b><span>Sindirim paketi açıp içindekileri ayırır.</span><span>Emilim ürünleri bağırsak duvarından içeri alır.</span><span>Taşınma ise bu ürünleri ihtiyaç duyulan yerlere götürür.</span></div>
+      <div class="learning-note"><b>Önemli:</b> Sindirim kanalının içi, teknik olarak vücudun dış ortamının devamı kabul edilir. Besinler bağırsak duvarını geçip kana veya lenfe alındığında vücudun iç ortamına katılmış olur.</div>
+    </section>
+
+    <section class="section journey-section" id="yolculuk">
+      <div class="section-heading"><div><div class="eyebrow">03 / BESİNİN YOLCULUĞU</div><h2>Hangi besin,<br><em>nasıl enerjiye dönüşür?</em></h2></div><p>Karbonhidrat, protein ve yağ aynı şekilde sindirilmez. Bir besin seç; hangi enzimlerin görev aldığını, hangi yapı taşlarına ayrıldığını ve nereye emildiğini adım adım izle.</p></div>
+      <div class="food-selector">
+        <button class="food-card active" data-food="bread"><span class="food-emoji food-illustration bread-illustration" aria-hidden="true"><svg viewBox="0 0 72 58"><path d="M10 42V24C10 13 19 7 36 7s26 6 26 17v18c0 5-5 8-11 8H21c-6 0-11-3-11-8Z" fill="#d99a52"/><path d="M17 25c1-8 8-12 19-12s18 4 19 12v16c0 3-3 5-7 5H24c-4 0-7-2-7-5Z" fill="#f5d49b"/><path d="M25 22c3-3 7-3 10 0m5 0c3-3 7-3 10 0" stroke="#c88745" stroke-width="2" fill="none" stroke-linecap="round"/></svg></span><span><b>Ekmek</b><small>Karbonhidrat</small></span><span class="food-check">✓</span></button>
+        <button class="food-card" data-food="egg"><span class="food-emoji food-illustration egg-illustration" aria-hidden="true"><svg viewBox="0 0 72 58"><path d="M36 5C24 5 14 25 14 39c0 10 9 15 22 15s22-5 22-15C58 25 48 5 36 5Z" fill="#f3eee0"/><ellipse cx="37" cy="37" rx="12" ry="10" fill="#efb94f"/><path d="M27 17c-5 7-8 15-7 21" stroke="#fff" stroke-width="3" stroke-linecap="round" fill="none" opacity=".7"/></svg></span><span><b>Yumurta</b><small>Protein</small></span><span class="food-check">✓</span></button>
+        <button class="food-card" data-food="oil"><span class="food-emoji food-illustration oil-illustration" aria-hidden="true"><svg viewBox="0 0 72 58"><path d="M27 8h18v7l5 5v29H22V20l5-5Z" fill="#d9b45c"/><path d="M27 8h18v7H27Z" fill="#a77a36"/><path d="M25 29h22v16H25Z" fill="#a6a83e"/><path d="M36 32c-5 5-5 8 0 10 5-2 5-5 0-10Z" fill="#e3d27b"/><path d="M29 3h14v5H29Z" fill="#d9dfe0"/></svg></span><span><b>Zeytinyağı</b><small>Yağ</small></span><span class="food-check">✓</span></button>
+      </div>
+      <div class="journey-key"><span><i class="key-dot digest"></i> Sindirim: parçalama</span><span><i class="key-dot absorb"></i> Emilim: bağırsak duvarını geçiş</span><span><i class="key-dot transport"></i> Taşınma: kan veya lenf</span></div>
+      <div class="journey-panel">
+        <div class="journey-top"><div><span class="panel-kicker">SEÇİLİ BESİN</span><h3 id="food-title">Ekmek yolculuğu</h3></div><span class="stage-count" id="stage-count">01 / 06</span></div>
+        <div class="journey-progress"><span id="progress-bar"></span></div>
+        <div class="journey-content"><div class="stage-visual" id="stage-visual"><div class="stage-icon">👄</div><div class="stage-rings"></div></div><div class="stage-copy"><div class="stage-tag" id="stage-tag">SİNDİRİM · AĞIZ</div><h3 id="stage-title">Yolculuk ağızda başlar.</h3><p id="stage-desc">Tükürükte bulunan amilaz enzimi nişastanın sindirimini başlatır. Besinler çiğneme ile küçük parçalara ayrılır.</p><div class="science-note"><span>✦ BİLİMSEL NOT</span><p id="stage-note">Mekanik sindirim yüzey alanını artırır; enzimlerin besine etki etmesini kolaylaştırır.</p></div></div></div>
+        <div class="journey-controls"><button class="secondary-btn" id="prev-stage" disabled>← Önceki</button><div class="stage-dots" id="stage-dots"></div><button class="primary-btn" id="next-stage">Sonraki durak <span>→</span></button></div>
+      </div>
+    </section>
+
+    <section class="section lab-section" id="laboratuvar">
+      <div class="section-heading"><div><div class="eyebrow">04 / MİKRO DÜNYA</div><h2>Bağırsak nasıl bu kadar<br><em>çok madde emebilir?</em></h2></div><p>İnce bağırsağın iç yüzeyi düz değildir. Katlantılar, villuslar ve mikrovilluslar emilim için çok geniş bir yüzey oluşturur.</p></div>
+      <div class="zoom-story">
+        <div class="zoom-level"><div class="zoom-visual intestine-visual"><div class="fold-line"></div><div class="fold-line second"></div><span>İnce bağırsak</span></div><div><small>1. BÜTÜN ORGAN</small><h3>İç yüzey katlantılıdır</h3><p>İnce bağırsağın iç yüzeyinde dairesel kıvrımlar bulunur. Bu kıvrımlar yüzey alanını artırır ve içeriğin ilerleyişini yavaşlatarak emilim için zaman kazandırır.</p></div></div>
+        <div class="zoom-arrow">↓ Yakından bak</div>
+        <div class="zoom-level"><div class="zoom-visual villi-visual"><div class="villus-shape"></div><div class="villus-shape small"></div><span>Villuslar</span></div><div><small>2. DOKU ÖLÇEĞİ</small><h3>Villus = parmak benzeri çıkıntı</h3><p>Villus, bağırsak duvarından içeri doğru uzanan küçük bir çıkıntıdır. Her villusun içinde kan kılcalları ve lenf kılcalı (şilüs damarı) bulunur. Sindirilmiş besinler bağırsak epitelinden geçerek bu damarlara ulaşır.</p></div></div>
+        <div class="zoom-arrow">↓ Bir hücrenin yüzeyine yaklaş</div>
+        <div class="zoom-level"><div class="zoom-visual micro-visual"><div class="micro-brush"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>Mikrovilluslar</span></div><div><small>3. HÜCRE ÖLÇEĞİ</small><h3>Mikrovillus = hücrenin üzerindeki minicik uzantılar</h3><p>Villusun dışını tek katlı epitel hücreleri örter. Bu hücrelerin bağırsak boşluğuna bakan yüzeyinde mikrovillus adı verilen çok daha küçük uzantılar vardır. Mikrovilluslar hücrenin emilim yapan yüzeyini kat kat artırır. Mikrovillusların oluşturduğu fırçamsı kenarda bazı son sindirim enzimleri de bulunur.</p></div></div>
+      </div>
+      <div class="villus-explain-grid">
+        <article><span class="mini-label">KAN KILCALLARI</span><h3>Glikoz ve amino asit</h3><p>Glikoz, amino asitler, suda çözünen vitaminlerin çoğu, mineraller ve su; bağırsak epitelini geçerek kan dolaşımına katılır.</p></article>
+        <article><span class="mini-label gold-label">LENF KILCALI</span><h3>Uzun zincirli yağların çoğu</h3><p>Yağ sindirimi ürünleri bağırsak hücresinde yeniden birleştirilip şilomikron adı verilen paketlere konur. Şilomikronlar önce villustaki lenf kılcalına geçer.</p></article>
+        <article><span class="mini-label">İNCE DUVAR + DAMAR AĞI</span><h3>Kısa geçiş mesafesi</h3><p>Bağırsak yüzeyini örten epitel tek hücre kalınlığındadır. Villus içindeki yoğun kan kılcalı ağı, kana geçen maddeleri hızla uzaklaştırır; lenf kılcalı ise şilomikronları toplar.</p></article>
+      </div>
+      <div class="analogy-box"><b>Villus ile mikrovillus arasındaki farkı unutma:</b> Villus, bağırsak duvarının parmak gibi çıkıntısıdır. Mikrovillus ise villusu örten epitel hücrelerinin yüzeyindeki mikroskobik fırça kılları gibidir. Yani biri doku düzeyinde, diğeri hücre yüzeyindedir.</div>
+    </section>
+
+    <section class="section transport-section" id="tasima">
+      <div class="section-heading"><div><div class="eyebrow">05 / EMİLİMDEN SONRA</div><h2>Her besin aynı yoldan<br><em>taşınmaz.</em></h2></div><p>Bağırsaktan emilen maddeler, özelliklerine göre kan veya lenf yoluna katılır. Su ve vitaminlerin taşınmasını da bu bölümde öğren.</p></div>
+      <div class="transport-table-wrap"><table class="transport-table"><thead><tr><th>Madde</th><th>Bağırsaktan geçiş / emilim</th><th>İlk taşınma yolu</th><th>Önemli bilgi</th></tr></thead><tbody>
+        <tr><td><b>Glikoz ve diğer monosakkaritler</b></td><td>İnce bağırsak epitelinden geçer</td><td><span class="route-blood">Kan kılcalları</span></td><td>Kapı toplardamarıyla önce karaciğere gider.</td></tr>
+        <tr><td><b>Amino asitler</b></td><td>İnce bağırsak epitelinden geçer</td><td><span class="route-blood">Kan kılcalları</span></td><td>Karaciğere taşınır; protein yapımında kullanılabilir.</td></tr>
+        <tr><td><b>Uzun zincirli yağların çoğu</b></td><td>Bağırsak hücresinde şilomikronlara paketlenir</td><td><span class="route-lymph">Lenf kılcalları</span></td><td>Lenf yoluyla büyük toplardamar dolaşımına katılır.</td></tr>
+        <tr><td><b>Su</b></td><td>Çoğunlukla ince bağırsakta, kalanı kalın bağırsakta emilir</td><td><span class="route-blood">Kan</span></td><td>Su emilimi, sindirim sıvılarının geri kazanılması ve sıvı dengesinin korunması için önemlidir.</td></tr>
+        <tr><td><b>Mineraller</b></td><td>İhtiyaca göre farklı mekanizmalarla emilir</td><td><span class="route-blood">Genellikle kan</span></td><td>Demir, kalsiyum, sodyum ve potasyum farklı görevler üstlenir.</td></tr>
+        <tr><td><b>B ve C vitaminleri</b></td><td>Suda çözünür; ince bağırsakta emilir (B12 için özel mekanizma gerekir)</td><td><span class="route-blood">Genellikle kan</span></td><td>B12 vitamini, midede üretilen intrinsik faktörle birleşerek emilir.</td></tr>
+        <tr><td><b>A, D, E ve K vitaminleri</b></td><td>Yağlarla birlikte emilir</td><td><span class="route-lymph">Çoğunlukla lenf</span></td><td>Yağda çözünen vitaminler yağ emilim mekanizmasını izler.</td></tr>
+      </tbody></table></div>
+      <div class="transport-explain"><article><h3>Kan yolu: karaciğerden geçiş</h3><p>Glikoz ve amino asitler villuslardaki kan kılcallarına geçer. Bu kan, kapı toplardamarı aracılığıyla önce karaciğere ulaşır. Karaciğer besinleri işler, depolayabilir veya kana geri verebilir. Daha sonra maddeler genel dolaşımla dokulara taşınır.</p></article><article><h3>Lenf yolu: yağların özel rotası</h3><p>Uzun zincirli yağların çoğu bağırsak hücrelerinde şilomikronlara paketlenir. Şilomikronlar kan kılcalına doğrudan geçemeyecek kadar büyük olduklarından lenf kılcallarına alınır. Lenf damarları bu içeriği göğüs kanalına, oradan da toplardamar sistemine taşır. Kısa ve orta zincirli bazı yağ asitleri ise doğrudan kana geçebilir.</p></article></div>
+      <div class="learning-note"><b>İstisnayı hatırla:</b> “Bütün yağlar lenfe, bütün vitaminler kana gider” demek doğru değildir. Yağın zincir uzunluğu ve vitaminin suda/yağda çözünmesi taşınma yolunu etkiler.</div>
+    </section>
+
+    <section class="section compare-section" id="karsilastir">
+      <div class="section-heading"><div><div class="eyebrow">06 / BİRBİRİNDEN AYIR</div><h2>Üç süreç, <em>tek amaç.</em></h2></div><p>Sindirim, emilim ve taşınma birlikte çalışır; ancak gerçekleştiği yer, yaptığı iş ve sonucu farklıdır.</p></div>
+      <div class="compare-grid"><article><h3>Sindirim</h3><b>Ne yapar?</b><p>Büyük molekülleri küçük moleküllere parçalar.</p><b>Nerede?</b><p>Ağız, mide ve özellikle ince bağırsakta.</p><b>Sonuç?</b><p>Emilebilecek küçük yapı taşları.</p></article><article><h3>Emilim</h3><b>Ne yapar?</b><p>Besin ürünlerini bağırsak duvarından geçirir.</p><b>Nerede?</b><p>Çoğunlukla ince bağırsakta; suyun kalanı kalın bağırsakta.</p><b>Sonuç?</b><p>Maddelerin kan veya lenfe katılması.</p></article><article><h3>Taşınma</h3><b>Ne yapar?</b><p>Emilen maddeleri organlara ve hücrelere ulaştırır.</p><b>Nerede?</b><p>Kan ve lenf damarlarında.</p><b>Sonuç?</b><p>Hücrelerin kullanabileceği maddelerin dağıtılması.</p></article></div>
+      <div class="health-panel"><div class="health-symbol">✚</div><div><span class="mini-label">SAĞLIKLA BAĞLANTISI</span><h3>Bu sistem neden önemli?</h3><p>Sindirim veya emilim bozulursa hücreler yeterli enerji ve yapı taşı alamayabilir. Yetersiz su ve mineral alımı sıvı-elektrolit dengesini; demir, B12 veya diğer besin öğelerinin eksikliği kan hücreleri, sinir sistemi ve başka işlevleri etkileyebilir. Lifli ve çeşitli beslenme, yeterli su, hareket ve hijyen sindirim sağlığını destekler.</p></div></div>
+    </section>
+    <section class="section energy-section" id="enerji">
+      <div class="energy-layout"><div class="energy-orb">ATP<span>✦</span></div><div class="energy-copy"><div class="eyebrow">07 / HÜCRESEL ENERJİ</div><h2>Besin hücreye ulaştı.<br><em>Peki ATP nasıl üretilir?</em></h2><p>Besinlerden elde edilen küçük moleküller kana veya lenfe geçer ve dokulara taşınır. Hücreler bu molekülleri enerji elde etmek, yapı kurmak veya depolamak için kullanır. Glikozun oksijenli hücresel solunumla parçalanması ATP üretiminin temel örneklerinden biridir.</p></div></div>
+      <div class="respiration-steps"><article><span>1</span><h3>Glikoz hücreye alınır</h3><p>Kanla taşınan glikoz, hücre zarındaki taşıyıcı proteinler yardımıyla hücreye girer.</p></article><article><span>2</span><h3>Glikoliz başlar</h3><p>Glikoz sitoplazmada daha küçük moleküllere ayrılır. Bu aşamada az miktarda ATP elde edilir.</p></article><article><span>3</span><h3>Mitokondri devreye girer</h3><p>Oksijenli solunumun devam eden basamaklarında besinlerden gelen enerji kullanılarak çok daha fazla ATP üretilir.</p></article><article><span>4</span><h3>ATP hücrede kullanılır</h3><p>Kas kasılması, aktif taşıma, yeni molekül üretimi ve hücrenin diğer işleri için ATP harcanır.</p></article></div>
+      <div class="equation-card"><span class="equation-title">OKSİJENLİ HÜCRESEL SOLUNUMUN GENEL DENKLEMİ</span><div class="equation">C₆H₁₂O₆ + 6 O₂ <b>→</b> 6 CO₂ + 6 H₂O + <strong>ATP için kullanılabilir enerji</strong></div><p>Glikoz + oksijen → karbondioksit + su + enerji. Bu denklem genel özeti verir; ATP üretimi hücre içinde birden fazla basamakta gerçekleşir.</p></div>
+      <div class="energy-fuels"><article><h3>Yağlar enerjiye nasıl katılır?</h3><p>Yağ asitleri hücrelerde beta-oksidasyonla daha küçük birimlere ayrılır. Oluşan asetil-CoA, hücresel solunum basamaklarına girerek ATP üretimine katkı sağlar. Yağlar gram başına yüksek enerji sağlayan önemli bir depodur.</p></article><article><h3>Proteinler enerjiye nasıl katılır?</h3><p>Amino asitler öncelikle yeni proteinlerin yapımında kullanılır. Gerektiğinde amino grubunun uzaklaştırılmasının ardından kalan karbon iskeleti enerji metabolizmasına katılabilir. Bu nedenle proteinler genellikle ilk tercih edilen enerji kaynağı değildir.</p></article></div>
+      <div class="learning-note"><b>Karıştırma:</b> Sindirim ATP üretmez; besinleri yapı taşlarına ayırır. Emilim bu maddeleri vücudun iç ortamına alır. Hücresel solunum ise hücrelerde besin moleküllerindeki kimyasal enerjinin ATP'ye aktarılmasını sağlar.</div>
+    </section>
+    <section class="section quiz-section" id="quiz">
+      <div class="section-heading"><div><div class="eyebrow">08 / ÖĞRENDİKLERİNİ DENE</div><h2>Bilgini <em>test et.</em></h2></div><p>Farklı türde sorularla sekiz öğrenme hedefinin tamamını dene. Her yanıtın açıklamasını inceleyerek yanlışlarını öğren.</p></div>
+      <div class="quiz-box"><div class="quiz-meta"><span class="panel-kicker">MİNİ BİYOLOJİ SINAVI</span><span id="quiz-number">SORU 1 / 25</span></div><div class="quiz-progress"><span id="quiz-progress"></span></div><h3 id="question">Besinlerin emiliminin büyük bölümü hangi organda gerçekleşir?</h3><div class="answers" id="answers"></div><div class="quiz-bottom"><p id="quiz-feedback">Bir cevap seçerek devam et.</p><button class="primary-btn" id="quiz-next" disabled>Devam et <span>→</span></button></div></div>
+    </section>
+  </main>
+  <footer><a class="brand" href="#"><span class="brand-mark">✳</span><span>BESİNDEN<span class="brand-light">ENERJİYE</span></span></a><p>Bilimin ışığında, besinden enerjiye.</p><span>3D MODEL: OPEN ANATOMY 3D · CC BY 4.0 · İNTERAKTİF BİYOLOJİ PROJESİ</span></footer>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
